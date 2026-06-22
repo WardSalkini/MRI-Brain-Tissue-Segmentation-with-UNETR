@@ -22,6 +22,22 @@ Key characteristics of the original:
 
 ---
 
+
+### Test Set Predictions
+
+![Visual Test Results](images/test.jpg)
+
+Each row shows: **MRI Input | Ground Truth | Prediction | Overlay**
+
+Color legend: `Black = Background` · `Red = CSF` · `Green = Gray Matter` · `Blue = White Matter`
+
+### 3D Visualization of 2D Segmentation
+
+<img src="images/3D.jpg" alt="3D Reconstructed Segmentation" width="600">
+
+Stacking the 2D per-slice predictions reconstructs a volumetric segmentation of the brain, color-coded by tissue class.
+---
+
 ### Our 2D Adaptation — Changes Made
 
 This implementation adapts the UNETR architecture for **2D slice-based** brain MRI segmentation. The following changes were made compared to the original paper:
@@ -123,20 +139,6 @@ Loss = 1.2 × Categorical Cross-Entropy + 1.0 × Dice Loss
 
 - Left: Combined loss (Dice + CCE) over epochs for train and validation
 - Right: Mean tissue Dice + per-class Dice (CSF, GM, WM) over epochs
-
-### Test Set Predictions
-
-![Visual Test Results](images/test.jpg)
-
-Each row shows: **MRI Input | Ground Truth | Prediction | Overlay**
-
-Color legend: `Black = Background` · `Red = CSF` · `Green = Gray Matter` · `Blue = White Matter`
-
-### 3D Visualization of 2D Segmentation
-
-<img src="images/3D.jpg" alt="3D Reconstructed Segmentation" width="600">
-
-Stacking the 2D per-slice predictions reconstructs a volumetric segmentation of the brain, color-coded by tissue class.
 
 
 
