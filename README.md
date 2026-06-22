@@ -139,6 +139,7 @@ Loss = 1.2 × Categorical Cross-Entropy + 1.0 × Dice Loss
 
 - Left: Combined loss (Dice + CCE) over epochs for train and validation
 - Right: Mean tissue Dice + per-class Dice (CSF, GM, WM) over epochs
+-  model results : val_csf_dice: 0.8579 - val_gm_dice: 0.8114 - val_loss: 0.1687 - val_mean_tissue_dice: 0.8510 - val_wm_dice: 0.8836
 
 
 
