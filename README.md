@@ -134,37 +134,13 @@ Color legend: `Black = Background` · `Red = CSF` · `Green = Gray Matter` · `B
 
 ### 3D Visualization of 2D Segmentation
 
-![3D Reconstructed Segmentation](images/3D.jpg)
+<img src="images/3D.jpg" alt="3D Reconstructed Segmentation" width="600">
 
 Stacking the 2D per-slice predictions reconstructs a volumetric segmentation of the brain, color-coded by tissue class.
 
----
 
-## 📁 Project Structure
 
-```
-├── BrainMatterSeg_UNETR_final.ipynb   # Main notebook (full pipeline)
-├── images/
-│   ├── UNETR.png                      # Original paper architecture figure
-│   ├── loss.jpg                       # Training loss & Dice curves
-│   ├── test.jpg                       # Visual test predictions
-│   └── 3D.jpg                         # 3D reconstruction of segmentation
-└── README.md
-```
 
----
-
-## 🚀 Running the Notebook
-
-Open in **Google Colab** (GPU recommended — T4 or better):
-
-1. Run Cell 1 — Install dependencies (`nibabel`, `pandas`)
-2. Run Cells 2–4 — Download ABIDE phenotypic CSV, T1.mgz, and label files
-3. Run Cell 5 — Convert labels to 4-class masks
-4. Run the preprocessing cells — Extract and patchify 2D slices
-5. Run the `tf.data` pipeline cell — Build train/val/test datasets
-6. Run the training cell — Trains for up to 55 epochs, saves best weights
-7. Run the evaluation cell — Loads best checkpoint, plots predictions, reports per-class Dice
 
 ---
 
